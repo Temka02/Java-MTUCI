@@ -21,21 +21,39 @@ public class Laptop extends Gadget {
         return ram;
     }
 
-    public void setRam(int ram) {
-        this.ram = ram;
-    }
-
     public int getStorage() {
         return storage;
+    }
+
+    public void setRam(int ram) {
+        this.ram = ram;
     }
 
     public void setStorage(int storage) {
         this.storage = storage;
     }
 
+    public String howMuchRam(){
+        if (getRam() > 8) {
+            return "Fast working";
+        }
+        else{
+            return "Normal working";
+        }
+    }
+
+    public String howMuchStorage(){
+        if (getStorage() > 512) {
+            return "Large storage capacity";
+        }
+        else{
+            return "Normal storage capacity";
+        }
+    }
+
     @Override
     public void deviceInfo() {
-        System.out.println("Laptop - Brand: " + getBrand() + ", Price: " + getPrice() + ", Color: " + getColor() + ", RAM: " + ram + "GB, Storage: " + storage + "GB");
+        System.out.println("Laptop - Brand: " + getBrand() + ", Price: " + getPrice() + ", Color: " + getColor() + ", RAM: " + ram + "GB, Storage: " + storage + "GB" + ", " + howMuchRam() + ", " + howMuchStorage());
     }
 
     @Override

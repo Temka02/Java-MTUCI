@@ -33,9 +33,27 @@ public class Telephone extends Gadget {
         this.screenDiagonal = screenDiagonal;
     }
 
+    public String bigScreen(){
+        if (this.screenDiagonal > 6.5){
+            return "Big screen";
+        }
+        else{
+            return "Normal screen";
+        }
+    }
+
+    public String isExpensive(){
+        if (getPrice() > 700){
+            return "Great price";
+        }
+        else{
+            return "Normal price";
+        }
+    }
+
     @Override
     public void deviceInfo() {
-        System.out.println("Telephone - Brand: " + getBrand() + ", Price: " + getPrice() + ", Color: " + getColor() + ", CPU: " + getCPU() + ", Screen diagonal: " + getScreenDiagonal() + " inch");
+        System.out.println("Telephone - Brand: " + getBrand() + ", Price: " + getPrice() + ", Color: " + getColor() + ", CPU: " + getCPU() + ", Screen diagonal: " + getScreenDiagonal() + " inch" + ", " + bigScreen() + ", " + isExpensive());
     }
 
     @Override
