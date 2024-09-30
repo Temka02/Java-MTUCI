@@ -62,7 +62,6 @@ public class secondTask {
                 result += lowerX.charAt(i);
             } 
         }
-
         return result;
     }
 
@@ -159,27 +158,21 @@ public class secondTask {
         for (char letterEight : str.toCharArray()) {
             if (letterEight == marker) {
                 if (flag) {
-                    // Если мы уже внутри маркера, завершаем и добавляем перевернутую часть
                     result.append(temp.reverse());
                     result.append(marker);
-                    temp.setLength(0); // Очищаем временное хранилище
+                    temp.setLength(0);
                 } else {
-                    // Если мы вне маркера, просто добавляем его
                     result.append(marker);
                 }
-                flag = !flag; // Переключаем состояние
+                flag = !flag;
             } else {
                 if (flag) {
-                    temp.append(letterEight); // Сохраняем символы между маркерами
+                    temp.append(letterEight);
                 } else {
-                    result.append(letterEight); // Сохраняем символы вне маркеров
                 }
             }
         }
-
-        // Добавляем оставшуюся часть, если она есть
         result.append(temp.reverse());
-
         return result.toString();
     }
 
