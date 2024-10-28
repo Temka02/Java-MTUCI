@@ -1,0 +1,12 @@
+Timestamp: 2024-10-28T12:54:24.153093300
+Exception: CustomDivisionException
+Message: Деление на ноль невозможно!
+-------------------------------
+Timestamp: 2024-10-28T13:04:59.466528800
+Exception: InputMismatchException
+Message: null
+-------------------------------
+Timestamp: 2024-10-28T13:05:19.488493400
+Exception: InputMismatchException
+Message: null
+-------------------------------
